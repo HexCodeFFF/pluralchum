@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="ZLibrary" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="Node.js Core Modules" />
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/../BDPluginLibrary" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../BDPluginLibrary" />
+    </CLASSES>
+    <DOCUMENTATION>
+      <root url="https://rauenzi.github.io/BDPluginLibrary/docs/" />
+    </DOCUMENTATION>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
