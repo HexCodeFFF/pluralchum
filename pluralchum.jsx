@@ -291,14 +291,16 @@ module.exports = class Pluralchum {
                 type: "system_tag",
             }
 
+            const BotTag = ZeresPluginLibrary.WebpackModules.find(m => m.default.displayName === "BotTag");
+            const BotTagTypes = BotTag.default.Types || BotTag.BotTagTypes;
+            const botTagClasses = ZeresPluginLibrary.WebpackModules.getByProps("botTagCozy");
 
-            // lol
-            let pkBadge = <span
-                className="botTagCozy-3NTBvK botTag-1NoD0B botTagRegular-kpctgU botTag-7aX5WZ rem-3kT9wc">
-							<PKBadge pk_id={props.message.id} onClick={
-                                (id) => this.updateMemberByMsg(id, this.getUserHash(props.message.author))
-                            } className="botText-1fD6Qk"/>
-						</span>;
+            let pkBadge = React.createElement(BotTag.default, {
+                type: BotTagTypes.BOT,
+                verified: false,
+                useRemSizes: true,
+                className: `${botTagClasses.botTagCozy} ${botTagClasses.botTagCompact}`
+            })
             // Preferences
 
             // 0 - Member
